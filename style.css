@@ -1,0 +1,58 @@
+/*
+Theme Name:Theme sit ludus 1C
+Theme URI:ludus 1C.com
+Author:Axel Laskowski
+Description : Theme css site web cours pascal
+Version: 1.0
+License: Ludus1C
+License URI: Ludus.com
+Text Domain: ludus 1C
+*/
+
+/* Général */
+
+/*devlaration font*/
+
+html{
+
+	background-color:silver;
+}
+
+h1{
+	text-align: center;
+	text-shadow: 2px 2px 5px black;
+	border: 3px inset;
+	border-color: silver;
+	border-radius: 5px 5px 100px 100px;
+	font-size:4em;
+	background-color: blue;
+	box-shadow: 5px 5px 0px black;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	color:silver;
+}
+
+h2{
+	color: silver;
+}
+p{
+	color: silver;
+	width: 80%;
+	margin:0 auto;
+	border:1px solid red;
+	text-align: justify;
+	padding: 40px;
+	margin-bottom: 50px;
+	height: 200px;
+	max-width: 800px;
+	min-width: 300px;
+
+	height: 200px;
+	overflow: auto;
+	word-wrap:break-word;
+}
+body{
+	background-color: blue;
+	background: url("image/freepascal.jpg") fixed no-repeat top left
+}

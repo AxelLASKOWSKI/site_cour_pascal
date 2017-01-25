@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charse="utf-8" />
+        <title>cours pascal</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!--liker sur css-->
+    </head>
+
+    <body>
+    	<!--corp de la page-->
+
+    	<h1>Cours en Pascal</h1>
+    	<h2>Pascal est un langage de programmation impératif qui, conçu pour l'enseignement, se caractérise par une syntaxe claire, rigoureuse et facilitant la structuration des programmes.</h2>
+
+    	<h2>Sommaire</h2>
+		<ol><li><a href="#presentation">présentation</a></li>
+			<li><a href="#cours">cours</a></li>
+			<ul>
+            	<li>varable</li>
+            	<li>constante</li>
+            	<li>procédure et fonction</li>
+            	<li>boucles</li>
+            	<li>tableau</li>
+        	</ul>
+        	<li><a href="exemple de code">exemple de code</a></li>
+        	<li><a href="réference">réference</a></li>
+        </ol>
+
+        <p id="presentation"><h3>prensentation</h3>Le langage de programmation Pascal a été inventé par Niklaus Wirth dans les années 1970 avec l'aide d'un de ses étudiants. Il a été conçu pour servir à l'enseignement de la programmation de manière rigoureuse mais simple. Ce langage est l'un de ceux qui ont servi à enseigner la programmation structurée. Le goto ou saut n'importe où dans le programme est fortement déconseillé dans ce langage, le programme est un assemblage de procédures et de fonctions, dans lesquelles on peut utiliser des blocs conditionnels (if, case) et répétitifs (while, for, repeat) ayant chacun une entrée et une sortie afin de faciliter les contrôles, ce qui aboutit à des mises au point rapides et sûres.</p>
+
+        <p id="cours"><h3>cours</h3>
+        	<p><h4>variable</h4>
+        	<strong>définition:</strong>Les variables sont similaires aux constantes mais leurs valeurs peuvent changer pendant que le programme fonctionne. Les variables doivent d'abord être déclarées avant de pouvoir être utilisées.<br/> Tous les identificateurs dans une liste sont déclarés comme étant du même type. Les types de donnée de base dans Pascal incluent :<br/>
+        	<ul>
+        	<li>les entiers (integer)</li>
+        	<li>les réels (real)</li>
+        	<li>les caractères (char)</li>
+        	<li>les booléens (boolean)</li>
+        	</ul>
+        	<h4>constante</h4>
+        	Les constantes sont référencées par des identificateurs et peuvent être affectées d'une valeur au début du programme. La valeur enregistrée dans une constante ne peut plus changer.Les constantes sont définies dans la section constante const du programme<br/>
+        	
+        	<h4>procédure et fonction</h4>
+        	<strong>procédure: </strong>Une procédure est une déclaration de routine qui peut être invoqué à partir d'une unité qui la déclare, vers l'extérieur de l'unité si la procédure est publique (déclarée dans la section interface), ou à partir d'un programme, et la routine ne retourne pas de valeur dans le cadre de sa définition. Une procédure qui retourne une valeur dans le cadre de sa définition est appelée fonction. Une procédure qui fait partie d'une classe est appelée une méthode. Une fonction qui fait partie d'un objet est également une méthode si elle ne peut pas se voir attribuer une valeur à l'extérieur de la fonction, et est une propriété si l'on peut attribuer une valeur à l'extérieur de la fonction.Vous pouvez également utiliser la procédure comme définition de type de vos variables, et exploiter ces variables comme des procédures.<br/>
+        	<strong>fonction: </strong>Les fonctions travaillent de la même façon que les procédures, mais en plus, elles retournent une valeur unique au programme principal à travers leur propre nom.Si votre fonction n'a pas d'argument, soyez prudent de ne pas utiliser le nom de la fonction sur le membre droit de toute affectation dans la fonction.
+        	<h4>boucles</h4>
+        	<strong>FOR...TO...DO: </strong><br/>
+        	En Pascal, la répétition finie est la boucle for. La forme générale est :<br/>for compte := 1 to 100 do<br/>
+  			somme := somme + compte;<br/>
+  			<strong>WHILE...DO:</strong><br/>
+  			La boucle continue à s'exécuter jusqu'à ce que l'expression devienne FALSE. Dans le corps de la boucle, vous devez en quelque sorte affecter une des variables qui sont utilisées dedans. Sinon, vous aurez une boucle infinie :<br/>a := 5;<br/>
+			while a < 6 do<br/>
+  			writeln (a);<br/>
+  			Il faut remédier à cette situation en changeant la valeur de la variable :<br/>
+  			a := 5;<br/>
+			while a < 6 do<br/>
+			begin<br/>
+  			writeln (a);<br/>
+  			a := a + 1<br/>
+			end;<br/>La boucle WHILE ... DO est appelée boucle pré-test parce que le test est réalisé avant que le corps de la boucle ne soit exécuté. Donc, si la condition n'est pas vérifiée (=FALSE) au départ, le corps de la boucle ne sera pas jamais exécuté. La condition est appelée invariant de boucle<br/>
+			<strong>REPEAT..UNTIL:</strong><br/>La boucle post-test a le format suivant :<br/>
+			repeat<br/>
+  			Instruction1;<br/>
+  			Instruction2<br/>
+			until BooleanExpression;<br/>
+			Dans une boucle repeat, les instructions composées sont natives — vous n'avez pas besoin d'utiliser les begin-end. Aussi, la boucle continue jusqu'à ce que l'expression booléenne soit vérifiée (= TRUE), cela exprime une condition de terminaison.<br/>
+			Cette boucle est appelée post-test car la condition est testée après l'exécution du corps de la boucle. La boucle REPEAT est utile quand vous voulez exécuter au moins une fois la boucle et que la valeur initiale de l'expression booléenne importe peu.<br/>
+			<h4>tableau:</h4>
+			Un array(tableau) est un type qui groupe des variables du même type. Des exemples sont les tableaux de char, integer, real ou tout autre type y compris les types définis par l'utilisateur.<br/><br/>
+			Des variables de types différents ne peuvent groupés dans un tableau. Pour faire cela, voir les enregistrements.
+			La déclaration se fait comme avec les types simples, mais vous être obligé de préciser le nombre d'éléments et le type de base.<br/>
+			La façon la plus simple est la suivante - elle définit un dénommé tableau statique (car la taille du tableau est connue à la compilation):<br/>
+			program<br/>
+			...<br/>
+			var <br/>
+			  variablename: array [startindex..endindex] of type;<br/>
+			begin<br/>
+			  ...<br/>
+			startindex doit être inférieur ou égal à endindex, et les deux doivent se ramener à des constantes, soit être une valeur entière ou une valeur constante qui est un entier. Les deux bornes peuvent négative ou nulles.<br/>
+
+			Exemple simple:<br/>
+			type<br/>
+			  simple_integer_array = array [1..10] of integer;<br/>
+			 
+			var<br/>
+			  Numbers: simple_integer_array;<br/>
+			Exemple plus complexe, tableau à deux dimensions:<br/>
+			type<br/>
+			  more_complex_array = array [0..5,1..3] of extended;<br/>
+			  other_complex_array = array [0..5] of array [1..3] of extended; // syntaxe équivalente<br/>
+			var<br/>
+			  specialmatrix: more_complex_array;<br/>
+			Les tableaux reflètent les concepts mathématiques de :<br/>
+			vecteurs (tableau à une dimension)<br/>
+			matrices (tableau à deux dimensions)<br/>
+			Les tableaux multidimensionnels sont pris en charge comme [x..y,z..t] et ainsi de suite.<br/>
+			Pour utiliser une variable, vous devez préciser le nom de la variable tableau et la position a[1].<br/></p>
+
+        <p id="exemple de code"><h3>exemple de code</h3>
+        	Hello World<br/>
+			program HelloWorld(output);<br/>
+			begin<br/>
+			writeln('Hello World');<br/>
+			readln;<br/>
+			end.<br/>
+			<p id="réference"><h3>réference</h3></p>
+			</p></p>
+
+
+
+
+			</body>
+
+
+
+</html>
+
+
